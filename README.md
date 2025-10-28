@@ -29,6 +29,7 @@ The project must be compiled from the top directory (the directory containing th
 To compile the provided JUnit test file:
 
 $ javac -cp .:/usr/share/java/junit.jar ./test/nfa/NFATest.java
+$ jaca -cp .:/usr/share/java/junit.jar:/usr/share/java/hamcrest.jar org.junit.runner.JUnitCore test.nfa.NFATest
 
 ---------------------------------
 4. EXECUTION INSTRUCTIONS
