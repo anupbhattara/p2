@@ -8,11 +8,23 @@ import org.junit.Test;
 
 import fa.nfa.NFA;
 
+/*
+ * JUnit tests for the NFA class.
+ * This test suite includes three NFA instances and verifies core functions
+ * state/transition creation, NFA correctness, isDFA, eClosure, accepts, and maxCopies.
+ * @author Anup and Daniel
+ */
 public class NFATest {
 	
+	/*
+	 * Creates and configures NFA 1. A simple automation that recognizes strings
+	 * where '1' is preceded by an even number of '0's and followed by an epsilon transition loop.
+	 * @return The configured NFA instance.
+	 */
 	private NFA nfa1() {
 		NFA nfa = new NFA();
 		
+	
 		nfa.addSigma('0');
 		nfa.addSigma('1');
 		
@@ -41,12 +53,18 @@ public class NFATest {
 		
 	}
 
+	/*
+	 * Test 1_1 verifies successful NFA instantiation.
+	 */
 	@Test
 	public void test1_1() {
 		NFA nfa = nfa1();
 		System.out.println("nfa1 instantiation done");
 	}
 	
+	/*
+	 * Test 1_2 verifies NFA state creation and retrieval.
+	 */
 	@Test
 	public void test1_2() {
 		NFA nfa = nfa1();
@@ -61,13 +79,18 @@ public class NFATest {
 		System.out.println("nfa1 correctness done");
 	}
 	
+	/*
+	 * Test 1_3 verifies NFA isDFA method.
+	 */
 	@Test
 	public void test1_3() {
 		NFA nfa = nfa1();
 		assertFalse(nfa.isDFA());
 		System.out.println("nfa1 isDFA done");
 	}
-	
+	/*
+	 * Test 1_4 verifies NFA eClosure method.
+	 */
 	@Test
 	public void test1_4() {
 		NFA nfa = nfa1();
@@ -76,6 +99,9 @@ public class NFATest {
 		System.out.println("nfa1 eClosure done");
 	}
 	
+	/*
+	 * Test 1_5 verifies NFA accepts method.
+	 */
 	@Test
 	public void test1_5() {
 		NFA nfa = nfa1();
@@ -87,6 +113,9 @@ public class NFATest {
 		System.out.println("nfa1 accepts done");
 	}
 	
+	/*
+	 * Test 1_6 verifies NFA maxCopies method.
+	 */
 	@Test
 	public void test1_6() {
 		NFA nfa = nfa1();
@@ -99,6 +128,11 @@ public class NFATest {
 		System.out.println("nfa1 maxCopies done");
 	}
 	
+	/*
+	 * Creates and configures NFA 2. A more complex NFA with epsilon transition
+	 * and non-deterministic transitions on '1' at q2 and '1' at q0
+	 * @return The configured NFA instance.
+	 */
 	private NFA nfa2() {
 		NFA nfa = new NFA();
 		
@@ -136,12 +170,18 @@ public class NFATest {
 		
 	}
 	
+	/*
+	 * Test 2_1 verifies successful NFA instantiation.
+	 */
 	@Test
 	public void test2_1() {
 		NFA nfa = nfa2();
 		System.out.println("nfa1 instantiation done");
 	}
 	
+	/*
+	 * Test 2_2 verifies NFA state creation and retrieval.
+	 */
 	@Test
 	public void test2_2() {
 		NFA nfa = nfa2();
@@ -158,6 +198,9 @@ public class NFATest {
 		System.out.println("nfa1 correctness done");
 	}
 	
+	/*
+	 * Test 2_3 verifies NFA isDFA method.
+	 */
 	@Test
 	public void test2_3() {
 		NFA nfa = nfa2();
@@ -165,6 +208,9 @@ public class NFATest {
 		System.out.println("nfa1 isDFA done");
 	}
 	
+	/* 
+	 * Test 2_4 verifies NFA eClosure method.
+	 */
 	@Test
 	public void test2_4() {
 		NFA nfa = nfa2();
@@ -176,6 +222,9 @@ public class NFATest {
 		System.out.println("nfa1 eClosure done");
 	}
 	
+	/*
+	 * Test 2_5 verifies NFA accepts method.
+	 */
 	@Test
 	public void test2_5() {
 		NFA nfa = nfa2();
@@ -186,7 +235,10 @@ public class NFATest {
 		assertFalse(nfa.accepts("0101"));
 		System.out.println("nfa1 accepts done");
 	}
-	
+
+	/*
+	 * Test 2_6 verifies NFA maxCopies method.
+	*/
 	@Test
 	public void test2_6() {
 		NFA nfa = nfa2();
@@ -199,6 +251,9 @@ public class NFATest {
 		System.out.println("nfa1 maxCopies done");
 	}
 	
+	/*
+	 * Creates and configures NFA 3. A more complex NFA with epsilon transition
+	 */
 	private NFA nfa3() {
 		NFA nfa = new NFA();
 		
@@ -237,12 +292,18 @@ public class NFATest {
 		
 	}
 
+	/*
+	 * Test 3_1 verifies successful NFA instantiation.
+	 */
 	@Test
 	public void test3_1() {
 		NFA nfa = nfa3();
 		System.out.println("nfa1 instantiation done");
 	}
 	
+	/*
+	 * Test 3_2 verifies NFA state creation and retrieval.
+	 */
 	@Test
 	public void test3_2() {
 		NFA nfa = nfa3();
@@ -257,6 +318,9 @@ public class NFATest {
 		System.out.println("nfa1 correctness done");
 	}
 	
+	/*
+	 * Test 3_3 verifies NFA isDFA method.
+	 */
 	@Test
 	public void test3_3() {
 		NFA nfa = nfa3();
@@ -264,6 +328,9 @@ public class NFATest {
 		System.out.println("nfa1 isDFA done");
 	}
 	
+	/*
+	 * Test 3_4 verifies NFA eClosure method.
+	 */
 	@Test
 	public void test3_4() {
 		NFA nfa = nfa3();
@@ -275,6 +342,9 @@ public class NFATest {
 		System.out.println("nfa1 eClosure done");
 	}
 	
+	/*
+	 * Test 3_5 verifies NFA accepts method.
+	 */
 	@Test
 	public void test3_5() {
 		NFA nfa = nfa3();
@@ -286,6 +356,9 @@ public class NFATest {
 		System.out.println("nfa1 accepts done");
 	}
 	
+	/*
+	 * Test 3_6 verifies NFA maxCopies method.
+	 */
 	@Test
 	public void test3_6() {
 		NFA nfa = nfa3();
