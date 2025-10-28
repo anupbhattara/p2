@@ -2,6 +2,12 @@ package fa.nfa;
 
 import java.util.*;
 
+/**
+ * Implementation of a nondeterministic finite automaton (NFA).
+ * Supports epsilon transitions and can determine if it's actually a DFA.
+ * 
+ * @author Anup Bhattarai and Daniel Aguilar Carranza
+ */
 public class NFA implements NFAInterface {
     
     private Set<NFAState> states;

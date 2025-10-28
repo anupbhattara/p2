@@ -3,6 +3,12 @@ package fa.nfa;
 import java.util.*;
 import fa.State;
 
+/**
+ * Represents a state in an NFA.
+ * Stores transitions to other states on symbols including epsilon.
+ * 
+ * @author Anup Bhattarai and Daniel Aguilar Carranza
+ */
 public class NFAState extends State {
     
     private Map<Character, Set<NFAState>> transitions;

@@ -2,7 +2,7 @@ PROJECT 2: Nondeterministic Finite Automata (NFA)
 =================================
 
 Authors:
-Anup Bhattara
+Anup Bhattarai
 Daniel Aguilar Carranza
 
 ---------------------------------
@@ -29,7 +29,6 @@ The project must be compiled from the top directory (the directory containing th
 To compile the provided JUnit test file:
 
 $ javac -cp .:/usr/share/java/junit.jar ./test/nfa/NFATest.java
-$ jaca -cp .:/usr/share/java/junit.jar:/usr/share/java/hamcrest.jar org.junit.runner.JUnitCore test.nfa.NFATest
 
 ---------------------------------
 4. EXECUTION INSTRUCTIONS
@@ -37,7 +36,7 @@ $ jaca -cp .:/usr/share/java/junit.jar:/usr/share/java/hamcrest.jar org.junit.ru
 
 To run the JUnit test cases, execute the following command (on a single line) from the top directory:
 
-$ java -cp .:/usr/share/java/junit.jar:/usr/share/java/hamcrest/core.jar org.junit.runner.JUnitCore test.nfa.NFATest
+java -cp .:/usr/share/java/junit.jar:/usr/share/java/hamcrest/hamcrest.jar org.junit.runner.JUnitCore test.nfa.NFATest
 
 The output will show the results of all test cases (e.g., NFATest1_1, NFATest1_2, etc.), indicating which ones passed and failed. All implemented methods must pass these tests to satisfy the project requirements.
 
